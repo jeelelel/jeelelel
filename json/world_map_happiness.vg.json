@@ -73,7 +73,7 @@
 },
 "transform": [
     {
-        "lookup": "Country",
+        "lookup": "Country name",
         "from": {
     "data": {
     "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/6_advanced_examples/data/VIC_LOCALITY_POLYGON_SHP.json",
@@ -100,7 +100,7 @@
         "legend": {"format": ".2s"}
 },
     "tooltip": [
-    {"field": "Country", "type": "nominal", "title":"Happiness"},
+    {"field": "Country name", "type": "nominal", "title":"Happiness"},
 {
         "field": "Life Ladder",
         "type": "quantitative",

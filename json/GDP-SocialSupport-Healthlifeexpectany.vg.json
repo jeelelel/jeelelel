@@ -1,0 +1,40 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "data/world-happiness-report.csv"
+    },
+    "width": "container",
+    "transform": [
+      {
+        "calculate": "datum.temp_max - datum.temp_min",
+        "as": "temp_range"
+      }
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "year",
+        "timeUnit": "year",
+        "type": "nominal",
+        "title": null
+      },
+      "y": {
+        "aggregate": "count",
+        "stack": "normalize",
+        "title": "Average 2007 to 2021",
+        "axis": {
+          "format": "%"
+        }
+      },
+      "color": {
+        "field": "Country name",
+        "type": "nominal",
+        "legend": {
+          "orient": "left",
+          "offset":-15
+        },
+        "title": "Weather Type"
+      }
+    },
+    "config": {}
+  }

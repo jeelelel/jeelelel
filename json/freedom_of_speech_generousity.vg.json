@@ -1,0 +1,29 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 400,
+    "title": "Freedom-Generosity-Corruption per Country",
+    "data": {
+    "url": "https://github.com/jeelelel/jeelelel.github.io/blob/main/data/world-happiness-report.csv"
+    },
+    "mark": "circle",
+    "encoding": {
+    "x": {
+    "field": "Year",
+    "type": "nominal",
+    "title": "Freedom - Generosity and Corruption"
+    },
+    "y": {
+    "field": "Freedom to make life choices",
+    "type": "quantitative"
+    },
+    "color": {
+    "field": "Generosity",
+    "type": "quantitative"
+    },
+    "size": {
+    "field": "Perceptions of corruption",
+    "type": "quantitative"
+}
+}
+}
