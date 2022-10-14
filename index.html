@@ -55,7 +55,16 @@
                 <div class="container">
                     <div class="item">
                         <div class="bg-blue-transparent logo-fa"><span><i class="fas fa-2x fa-atom"></i></span> World Happiness 2021 </div>
-                        <div class="bg-blue-transparent simple"><p>Blablablablablabalbalbla</p></div>
+                        <div class="bg-blue-transparent simple" id="scatter_plot0">
+                            <p>Blablablablablabalbalbla</p>
+                            <script type="text/javascript">
+                                var spec = "json/buble.vg.json";
+                                vegaEmbed('#scatter_plot0', spec, { "actions": false }).then(function (result) {
+                                    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                                    }).catch(console.error);
+    
+                                </script>
+                        </div>
                     </div>
                 </div>
             </div>
