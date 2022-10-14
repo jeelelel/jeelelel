@@ -76,7 +76,7 @@
                                 }).catch(console.error);
 
                             </script>
-                            
+
                             <div class="tm-work-item-inner">
                                 <div class="icn"><i class="fas fa-2x fa-icons"></i></div>
                                 <h3>.01 Freedom of Speech</h3>
@@ -100,20 +100,20 @@
                     </div>
                     <div class="title">
                         <h2>Charts</h2>
-                        <div id="scatter_plot1"></div>
+                        <div id="scatter_plot2"></div>
                         <script type="text/javascript">
-                            var spec3 = "json\freedom_of_speech_generousity.vg.json";
-                            vegaEmbed('#scatter_plot1', spec3, { "actions": false }).then(function (result) {
+                            var spec3 = "json\buble.vg.json";
+                            vegaEmbed('#scatter_plot2', spec3, { "actions": false }).then(function (result) {
                                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
                               }).catch(console.error);
                         </script>
 
-                    <div id="scatter_plot2"></div>
+                    <div id="scatter_plot3"></div>
 
                         <script type="text/javascript">
 
                             var spec4 = "json\GDP-SocialSupport-Healthlifeexpectany.json";
-                            vegaEmbed('#scatter_plot2', spec4, { "actions": false }).then(function (result) {
+                            vegaEmbed('#scatter_plot3', spec4, { "actions": false }).then(function (result) {
                                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
                               }).catch(console.error);
                         </script>

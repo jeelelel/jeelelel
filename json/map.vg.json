@@ -6,7 +6,7 @@
     },
     "vconcat": [
     {
-    "width": "container",
+    "width": 800,
     "height": 400,
     "title": "World Life Ladder (Happiness)",
     "projection": {"type": "equalEarth", "rotate": [-150, 0,
