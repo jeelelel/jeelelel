@@ -106,27 +106,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="title">
-                        <h2>Charts</h2>
-                        <div id="scatter_plot2">
-                        <script type="text/javascript">
-                            var spec3 = "json\buble.vg.json";
-                            vegaEmbed('#scatter_plot2', spec3, { "actions": false }).then(function (result) {
-                                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-                              }).catch(console.error);
-                        </script>
-                        </div>
-                    </div>
-
+                    
                     <div id="scatter_plot3">
 
-                        <script type="text/javascript">
-
-                            var spec4 = "json\GDP-SocialSupport-Healthlifeexpectany.json";
-                            vegaEmbed('#scatter_plot3', spec4, { "actions": false }).then(function (result) {
-                                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-                              }).catch(console.error);
-                        </script>
+                    
                     </div>
                 </div>
             </section>
@@ -228,9 +211,17 @@
                         <h3>Positive VS Negative effects</h3>
                     </div>
                     <div class="row">
+                        <script type="text/javascript" id="#scatter_plot3">
+
+                            var spec4 = "json\freedom_of_speech_generousity.vg.json";
+                            vegaEmbed('#scatter_plot3', spec4, { "actions": false }).then(function (result) {
+                                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                              }).catch(console.error);
+                        </script>
+
                         <div class="col-lg-5 col-md-6 mb-4 contact-form">
                             <div class="form tm-contact-item-inner">
-                        
+                                
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4 contact-details">
