@@ -118,7 +118,7 @@
 "axis": {"title": "Year", "format": "%Y"}
 },
 "y": {
-    "aggregate": "count",
+    "aggregate": "average",
     "axis": {"tickCount": 3, "grid": false},
     "title": "Count"
     }
