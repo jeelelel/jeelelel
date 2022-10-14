@@ -1,0 +1,104 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "COVID-19 Active Cases (10 Oct 2020)",
+    "width": 800,
+    "height": 400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+      "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+    },
+    "projection": {"type": "equalEarth"},
+    "layer": [
+      {
+        "transform": [
+          {
+            "calculate": "'Data is not available in ' + datum.properties.NAME",
+            "as": "note"
+          }
+        ],
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"},
+        "encoding": {"tooltip": {"field": "note"}}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+          "format": {"type": "topojson", "feature": "oceans"}
+        },
+        "mark": {"type": "geoshape", "fill": "skyblue"}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/WorldMapWithGraticules.topojson",
+          "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+        },
+        "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
+      },
+      {
+        "transform": [
+          {
+            "lookup": "properties.NAME",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/jeelelel/jeelelel.github.io/main/data/world-happiness-report.csv"
+              },
+              "key": "Country name",
+              "fields": ["Log GDP per capita", "Life Ladder", "Social support"]
+            }
+          },
+          {
+            "calculate": "datum.Life Ladder",
+            "as": "Life Ladder"
+          }
+        ],
+        "mark": {"type": "geoshape", "stroke": "white"},
+        "encoding": {
+          "color": {
+            "field": "Life Ladder",
+            "type": "quantitative",
+            "scale": {
+              "type": "threshold",
+              "domain": [1, 5, 10],
+              "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
+            }
+          },
+          "tooltip": [
+            {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+            {"field": "Active", "type": "quantitative"},
+            {
+              "field": "Life Ladder",
+              "type": "quantitative",
+              "format": ".2f"
+            }
+          ]
+        }
+      },
+      {
+        "transform": [
+          {
+            "lookup": "properties.NAME",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/3_choropleth_map/data/countryInfo.csv"
+              },
+              "key": "name",
+              "fields": ["latitude", "longitude"]
+            }
+          }
+        ],
+        "mark": {"type": "text"},
+        "encoding": {
+          "longitude": {"field": "longitude", "type": "quantitative"},
+          "latitude": {"field": "latitude", "type": "quantitative"},
+          "text": {"field": "properties.NAME", "type": "nominal"},
+          "opacity": {
+            "condition": {
+              "test": "datum['properties.NAME'] == 'China' || datum['properties.NAME'] == 'Brazil' || datum['properties.NAME'] == 'Australia' || datum['properties.NAME'] == 'Malaysia' ||  datum['properties.NAME'] == 'Yemen' ||  datum['properties.NAME'] == 'United States of America'",
+              "value": 1
+            },
+            "value": 0
+          }
+        }
+      }
+    ],
+    "config": {}
+  }
