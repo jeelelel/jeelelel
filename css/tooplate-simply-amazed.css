@@ -659,7 +659,10 @@ overflow-y: scroll;}
 
 .banner-section .simple {
   color: #fff;
+  width: max-content;
   display: inline-block;
+  overflow-y: scroll;
+  overflow-x: scroll;
   margin: auto;
   margin-left: 97px;
   padding: 33px 68px 34px 68px;
