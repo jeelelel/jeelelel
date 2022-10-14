@@ -60,8 +60,9 @@
                         <div class="bg-blue-transparent simple" id="scatter_plot0">
                             <script type="text/javascript">
                                 var spec0 = "json/buble.vg.json";
-                                vegaEmbed('#scatter_plot0', spec0, {renderer: 'svg'}).then(res => {
-                                    var view = res.view;
+                                vegaEmbed('#scatter_plot0', spec0, { "actions": false }).then(function (result) {
+                                    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                                    }).catch(console.error);
                                 </script>
                         </div>
                     </div>
