@@ -67,11 +67,12 @@
                     <div class="row">
                         <H3>WHAT MAKES A COUNTRY HAPPIER ? </H3>
                         <div id="scatter_plot1"></div>
-                    <script type="text/javascript">
-                    var spec2 = "C:\Users\Jessica Lim\Documents\GitHub\jeelelel.github.io\json\world_map_happiness.vg.json";
-                     vegaEmbed('#scatter_plot1', spec2).then(function(result) {
-                    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-                    }).catch(console.error);
+                            <script type="text/javascript">
+                            var spec2 = "json/map.vg.json";
+                            vegaEmbed('#scatter_plot1', spec2, { "actions": false }).then(function (result) {
+                                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                                }).catch(console.error);
+
                     </script>
                         <div class="item col-md-4">
                             <div class="tm-work-item-inner">
@@ -100,9 +101,9 @@
                         <div id="scatter_plot1"></div>
                         <script type="text/javascript">
                             var spec3 = "json\freedom_of_speech_generousity.vg.json";
-                            vegaEmbed('#scatter_plot1', spec3).then(function(result) {
-                            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-                            }).catch(console.error);
+                            vegaEmbed('#scatter_plot1', spec3, { "actions": false }).then(function (result) {
+                                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                              }).catch(console.error);
                         </script>
 
                     <div id="scatter_plot2"></div>
@@ -110,9 +111,9 @@
                         <script type="text/javascript">
 
                             var spec4 = "json\GDP-SocialSupport-Healthlifeexpectany.json";
-                            vegaEmbed('#scatter_plot2', spec4).then(function(result) {
-                            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-                            }).catch(console.error);
+                            vegaEmbed('#scatter_plot2', spec4, { "actions": false }).then(function (result) {
+                                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                              }).catch(console.error);
                         </script>
                     </div>
                 </div>
