@@ -33,7 +33,7 @@
           "orient": "left",
           "offset":-15
         },
-        "title": "Weather Type"
+        "title": "Each Country Type"
       }
     },
     "config": {}

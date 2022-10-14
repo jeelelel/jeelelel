@@ -9,7 +9,7 @@
     "mark": "circle",
     "encoding": {
     "x": {
-    "field": "Year",
+    "field": "year",
     "type": "nominal",
     "title": "Freedom - Generosity and Corruption"
     },
