@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {
-      "url": "data/world-happiness-report.csv"
+      "url": "https://raw.githubusercontent.com/jeelelel/jeelelel.github.io/main/data/world-happiness-report.csv"
     },
     "width": "container",
     "transform": [

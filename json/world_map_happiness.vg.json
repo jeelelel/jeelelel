@@ -69,7 +69,7 @@
 },
 {
     "data": {
-    "url": "https://github.com/jeelelel/jeelelel.github.io/blob/main/data/world-happiness-report.csv"
+    "url": "https://raw.githubusercontent.com/jeelelel/jeelelel.github.io/main/data/world-happiness-report.csv"
 },
 "transform": [
     {
