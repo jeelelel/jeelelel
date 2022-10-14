@@ -114,7 +114,7 @@
 "encoding": {
 "x": {
 "field": "year",
-"timeUnit": "year",
+"timeUnit": "yearmonth",
 "axis": {"title": "Year", "format": "%Y"}
 },
 "y": {
@@ -137,7 +137,7 @@
     "encoding": {
     "x": {
     "field": "year",
-    "timeUnit": "year",
+    "timeUnit": "yearmonth",
     "scale": {"domain": {"param": "time_brush"}},
     "axis": {"title": "", "tickCount": 5, "grid": false}
     },
