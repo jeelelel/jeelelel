@@ -617,7 +617,8 @@ textarea.form-control {
   align-items: flex-start;
 }
 
-.bg-blue-transparent { background-color: rgb(102 153 204 / 0.8); }
+.bg-blue-transparent { background-color: rgb(102 153 204 / 0.8); 
+overflow-x: scroll;}
 
 .banner-section .logo-fa {  
   color: #fff;

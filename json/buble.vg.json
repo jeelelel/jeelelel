@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A bubble plot showing the correlation between health and income for 187 countries in the world (modified from an example in Lisa Charlotte Rost's blog post 'One Chart, Twelve Charting Libraries' --http://lisacharlotterost.github.io/2016/05/17/one-chart-code/).",
-    "width": "container","height": 300,
+    "width": 10000,"height": 300,
     "data": {
       "url": 
       "https://raw.githubusercontent.com/jeelelel/jeelelel.github.io/main/data/world-happiness-report.csv"
@@ -15,14 +15,12 @@
     "encoding": {
       "y": {
         "field": "Healthy life expectancy at birth",
-        "type": "quantitative",
-        "scale": {"type": "linear"}
+        "type": "quantitative"
       },
       "x": {
-        "field": "Country name",
-        "scale": {"type": "time"}
+        "field": "Country name"
       },
       "size": {"field": "Log GDP per capita", "type": "quantitative"},
-      "color": {"value": "#000"}
+      "color": {"field": "Social support",  "type": "quantitative"}
     }
   }

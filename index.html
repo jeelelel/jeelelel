@@ -52,16 +52,15 @@
         
         <main id="content-box" class="order-first">
             <div class="banner-section section parallax-window" data-parallax="scroll" data-image-src="img/section-1-bg.jpg" id="section-1">
-                <script type="text/javascript">
-                    var spec = "json/buble.vg.json";
-                    vegaEmbed('#section_1', spec, { "actions": false }).then(function (result) {
-                        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-                        }).catch(console.error);
-
-                    </script>
                 <div class="container">
                     <div class="item">
                         <div class="bg-blue-transparent logo-fa" id="scatter_plot0">
+                            <script type="text/javascript">
+                                var spec = "json/buble.vg.json";
+                                vegaEmbed('#scatter_plot0', spec, { "actions": false }).then(function (result) {
+                                    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                                    }).catch(console.error);
+                                </script>
                         </div>
                         <div class="bg-blue-transparent simple">
                             <p> World Happiness 2021</p>
