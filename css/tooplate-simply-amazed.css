@@ -618,7 +618,8 @@ textarea.form-control {
 }
 
 .bg-blue-transparent { background-color: rgb(102 153 204 / 0.8); 
-overflow-x: scroll;}
+overflow-x: scroll;
+overflow-y: scroll;}
 
 .banner-section .logo-fa {  
   color: #fff;
