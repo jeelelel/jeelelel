@@ -688,7 +688,7 @@ textarea.form-control {
 .work-section {
   padding-top: 90px!important;
   padding-bottom: 90px!important;
-  min-height: 850px;
+  height: auto;
   background-color: #6699cc;
 }
 
