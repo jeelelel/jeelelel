@@ -113,9 +113,9 @@
 ],
 "encoding": {
 "x": {
-"field": "time",
+"field": "year",
 "timeUnit": "year",
-"axis": {"title": "", "format": "%Y"}
+"axis": {"title": "Year", "format": "%Y"}
 },
 "y": {
     "aggregate": "count",
@@ -136,7 +136,7 @@
     "mark": "area",
     "encoding": {
     "x": {
-    "field": "time",
+    "field": "year",
     "timeUnit": "year",
     "scale": {"domain": {"param": "time_brush"}},
     "axis": {"title": "", "tickCount": 5, "grid": false}
