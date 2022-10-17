@@ -120,6 +120,7 @@ body {
   z-index: 9;
   position: relative;
   height:fit-content;
+  width:max-content ;
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -131,6 +132,7 @@ body {
 }
 
 .slide__subheader{
+  width: max-content;
   padding-left: 15%;
   position: relative;
   z-index: 9;
