@@ -137,6 +137,9 @@ body {
   display: flex;
   -webkit-box-align: center;
           align-items: center;
+          overflow-y: hidden;
+  -webkit-transform: translateX(5%);
+          transform: translateX(5%);
 }
 
 @media (min-width: 54em) {
