@@ -130,7 +130,8 @@ body {
 }
 
 .slide__subheader{
-  z-index: 7;
+  padding-left: 5%;
+  z-index: 9;
   position: relative;
   display: -webkit-box;
   display: flex;
