@@ -141,6 +141,15 @@ body {
   color: #111;
   overflow-y: hidden;
 }
+
+.slide__subtitle {
+  font-family: Montserrat, helvetica;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #111;
+  overflow-y: hidden;
+}
+
 @media (min-width: 54em) {
   .slide__title {
     font-size: 5em;
@@ -150,6 +159,12 @@ body {
   display: block;
   overflow-y: hidden;
 }
+
+.slide__subtitle .subtitle-line {
+  display: block;
+  overflow-y: hidden;
+}
+
 .slide__title .title-line span {
   display: inline-block;
   -webkit-transform: translate3d(0, 140%, 0);
