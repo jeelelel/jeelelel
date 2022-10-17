@@ -42,6 +42,7 @@
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
                 }).catch(console.error);
           </script>
+          </div>
         </header>
         </div>
           <h3 class="slide__subtitle">
@@ -73,9 +74,17 @@
       <figure class="slide__figure"><div class="slide__img" style="background-image: url(https://source.unsplash.com/WuQME0I_oZA/2000x1100)"></div></figure>
       <header class="slide__header">
         <h2 class="slide__title">
-          <span class="title-line"><span>This Right</span></span>
-          <span class="title-line"><span>Here Makes Three</span></span>
+          <span class="title-line"><span>More Details on World Happiness</span></span>
+          <span class="title-line"><span>Over the years</span></span>
         </h2>
+        <div class="chart__img" id='scatter_plot2'>
+          <script type="text/javascript">
+            var spec3 = "json/map.vg.json";
+            vegaEmbed('#scatter_plot2', spec3, { "actions": false }).then(function (result) {
+                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                }).catch(console.error);
+          </script>
+          </div>
       </header>
     </div>
   </section>
@@ -86,8 +95,10 @@
       <header class="slide__header">
         <h2 class="slide__title">
           <span class="title-line"><span>How Now</span></span>
-          <span class="title-line"><span>Part Four More</span></span>
         </h2>
+        <h3 class="subtitle__header">
+        <span class="subtitle-line"><span>According to the World Happiness Report, there are six key ingredients for national happiness: income, healthy life expectancy, social support, freedom, trust, and generosity. Scandinavian countries—which typically top the global happiness rankings (Finland is currently first)—tend to do well on all these measures. In contrast, war-torn nations such as South Sudan, Central African Republic, and Afghanistan tend to do badly. So does happiness rely on these six key ingredients?</span></span>
+      </h3>
       </header>
     </div>
   </section>
@@ -97,9 +108,16 @@
       <figure class="slide__figure"><div class="slide__img" style="background-image: url(https://source.unsplash.com/NsWcRlBT_74/2000x1100)"></div></figure>
       <header class="slide__header">
         <h2 class="slide__title">
-          <span class="title-line"><span>How Now</span></span>
-          <span class="title-line"><span>Part 5 More</span></span>
+          <span class="title-line"><span>Countries and Regions Freedom and Corruption Chart</span></span>
         </h2>
+        <div class="chart__img" id='scatter_plot3'>
+          <script type="text/javascript">
+            var spec4 = "json/freedom_of_speech_generousity.vg.json";
+            vegaEmbed('#scatter_plot3', spec4, { "actions": false }).then(function (result) {
+                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                }).catch(console.error);
+          </script>
+          </div>
       </header>
     </div>
   </section>
@@ -109,12 +127,44 @@
       <figure class="slide__figure"><div class="slide__img" style="background-image: url(https://source.unsplash.com/NsWcRlBT_74/2000x1100)"></div></figure>
       <header class="slide__header">
         <h2 class="slide__title">
-          <span class="title-line"><span>How Now</span></span>
-          <span class="title-line"><span>Part Six More</span></span>
+          <span class="title-line"><span>Countries and Factors Over The Years</span></span>
         </h2>
       </header>
     </div>
   </section>
+
+  <section class="slide">
+    <div class="slide__content">
+      <figure class="slide__figure"><div class="slide__img" style="background-image: url(https://source.unsplash.com/NsWcRlBT_74/2000x1100)"></div></figure>
+      <header class="slide__header">
+        <div class="chart__img" id='scatter_plot4'>
+          <script type="text/javascript">
+            var spec5 = "json/log-gdp-social-support.vg.json";
+            vegaEmbed('#scatter_plot4', spec5, { "actions": false }).then(function (result) {
+                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                }).catch(console.error);
+          </script>
+          </div>
+      </header>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="slide__content">
+      <figure class="slide__figure"><div class="slide__img" style="background-image: url(https://source.unsplash.com/NsWcRlBT_74/2000x1100)"></div></figure>
+      <header class="slide__header">
+        <div class="chart__img" id='scatter_plot5'>
+          <script type="text/javascript">
+            var spec6 = "json/freedom-mess.vg.json";
+            vegaEmbed('#scatter_plot5', spec6, { "actions": false }).then(function (result) {
+                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                }).catch(console.error);
+          </script>
+          </div>
+      </header>
+    </div>
+  </section>
+  
 </section>
 </main>
 <!-- partial -->
