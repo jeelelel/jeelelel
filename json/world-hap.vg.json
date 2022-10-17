@@ -19,8 +19,13 @@
       },
       {
         "name": "HappinessLadder",
-        "value": 6,
+        "value": 3,
         "bind": {"input": "range", "min": 0, "max": 12, "step": 0.1}
+      },
+      {
+        "name": "FilterbyRanking",
+        "value":149,
+        "bind":{"input": "range", "min": 1, "max": 100, "step": 1}
       }
     ],
     "layer": [
@@ -42,11 +47,17 @@
           "url": "https://raw.githubusercontent.com/jeelelel/jeelelel.github.io/main/data/world-happiness-report-2021-lat-long%20-%20world-happiness-report-2021.csv",
           "format": {"type": "csv"}
         },
+  
         "transform": [
+          {
+  "window": [{"op": "rank", "as": "ranking"}],
+  "sort": [{"field": "Ladder score", "order":
+  "descending"}]
+  },
           {"calculate": "datum.Longitude", "as": "longitude"},
           {"calculate": "datum.Latitude", "as": "latitude"},
           {
-            "filter": "(rotate0 * -1) - 90 < datum.longitude && datum.longitude < (rotate0 * -1) + 90 && (rotate1 * -1) - 90 < datum.latitude && datum.latitude < (rotate1 * -1) + 90"
+            "filter": "(rotate0 * -1) - 90 < datum.longitude && datum.longitude < (rotate0 * -1) + 90 && (rotate1 * -1) - 90 < datum.latitude && datum.latitude < (rotate1 * -1) + 90 && datum.ranking <= FilterbyRanking"
           },
           {"calculate": "datum['Ladder score']", "as": "magnitude"}
         ],
@@ -60,12 +71,19 @@
             "type": "quantitative",
             "scale": {
               "type": "linear",
-              "domain": [0,10],
+              "domain": [2,3,4,5,6,7,8],
               "range": [0, {"expr": "pow(HappinessLadder, 3)"}]
             }
           },
-          "tooltip": [{"field": "magnitude"}]
+          "tooltip": [{"field": "Ladder score"},
+          {"field": "Country name"},
+          {"field": "ranking"}
+          ]
         }
+        
       }
+      
     ]
+    
   }
+  
