@@ -119,7 +119,7 @@ body {
 .slide__header {
   z-index: 9;
   position: relative;
-  height: 60%;
+  height: 100%;
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
