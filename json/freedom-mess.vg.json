@@ -1,0 +1,63 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/jeelelel/jeelelel.github.io/main/data/world-happiness-report.csv",
+      "format": {"parse": {"year": "date"}}
+    },
+    "width": 650,
+    "height": 300,
+    "layer": [
+      {
+        "params": [{
+          "name": "index",
+          "value": [{"x": {"year": 2005}}],
+          "select": {
+            "type": "point",
+            "encodings": ["x"],
+            "on": "mouseover",
+            "nearest": true
+          }
+        }],
+        "mark": "point",
+        "encoding": {
+          "x": {"field": "year", "type": "temporal", "axis": null},
+          "opacity": {"value": 0}
+        }
+      },
+      {
+        "transform": [
+          {
+            "lookup": "symbol",
+            "from": {"param": "index", "key": "symbol"}
+          }
+        ],
+        "mark": "line",
+        "encoding": {
+          "x": {"field": "year", "type": "temporal", "axis": null},
+          "y": {
+            "field": "Freedom to make life choices", "type": "quantitative",
+            "axis": {"format": "%"}
+          },
+          "color": {"field": "Country name", "type": "nominal"}
+        }
+      },
+      {
+        "transform": [{"filter": {"param": "index"}}],
+        "encoding": {
+          "x": {"field": "year", "type": "temporal", "axis": null},
+          "color": {"value": "firebrick"}
+        },
+        "layer": [
+          {"mark": {"type": "rule", "strokeWidth": 0.5}},
+          {
+            "mark": {"type": "text", "align": "center", "fontWeight": 100},
+            "encoding": {
+              "text": {"field": "year", "timeUnit": "year"},
+              "y": {"value": 310}
+            }
+          }
+        ]
+      }
+    ]
+  }
+  

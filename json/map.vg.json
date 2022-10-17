@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {
     "url":
-    "https://raw.githubusercontent.com/jeelelel/jeelelel.github.io/main/data/world-happiness-report.csv"
+    "https://raw.githubusercontent.com/jeelelel/jeelelel.github.io/main/data/world-happiness-report%20-%20world-happiness-report.csv"
     },
     "vconcat": [
     {
@@ -45,19 +45,18 @@
 {
 "transform": [{"filter": {"param": "time_brush"}}],
 "encoding": {
-"longitude": {"field": "longitude", "type":
+"longitude": {"field": "Longitude", "type":
 "quantitative"},
-"latitude": {"field": "latitude", "type":
+"latitude": {"field": "Latitude", "type":
 "quantitative"},
 "color": {
-"field": "life",
+"field": "Life Ladder",
 "type": "quantitative",
 "title": "Life Ladder",
 "scale": {
 "type": "threshold",
-"domain": [5.5, 6, 6.5, 7],
-"range": ["#fdbe85", "#fd8d3c", "#e6550d",
-"#bd0026", "#7f0000"]
+"domain": [2, 2.5 , 3, 3.5, 4,4.2,4.4,4.5,5,5.5,6,6.5,7,7.5,8,8.5],
+"range": ["#1abc9c",  "#16a085",  "#2ecc71",  "#27ae60",  "#3498db",  "#2980b9",  "#9b59b6",  "#8e44ad",  "#34495e",  "#2c3e50",  "#f1c40f",  "#f39c12",  "#e67e22",  "#d35400",  "#e74c3c",  "#c0392b",  "#ecf0f1",  "#bdc3c7",  "#95a5a6","#7f8c8d"]
 }
 },
 "tooltip": [
@@ -67,7 +66,7 @@
 ]
 },
 "layer": [
-{"mark": {"type": "circle", "opacity": 0.4, "size":
+{"mark": {"type": "circle", "opacity": 0.2, "size":
 15}},
 {
 "transform": [
@@ -114,7 +113,7 @@
 "encoding": {
 "x": {
 "field": "year",
-"timeUnit": "yearmonth",
+"timeUnit": "year",
 "axis": {"title": "Year", "format": "%Y"}
 },
 "y": {

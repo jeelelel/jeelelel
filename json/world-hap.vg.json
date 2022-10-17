@@ -1,0 +1,71 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 300,
+    "height": 300,
+    "projection": {
+      "type": "orthographic",
+      "rotate": {"expr": "[rotate0, rotate1, 0]"}
+    },
+    "params": [
+      {
+        "name": "rotate0",
+        "value": 0,
+        "bind": {"input": "range", "min": -90, "max": 90, "step": 1}
+      },
+      {
+        "name": "rotate1",
+        "value": 0,
+        "bind": {"input": "range", "min": -90, "max": 90, "step": 1}
+      },
+      {
+        "name": "HappinessLadder",
+        "value": 6,
+        "bind": {"input": "range", "min": 0, "max": 12, "step": 0.1}
+      }
+    ],
+    "layer": [
+      {
+        "data": {"sphere": true},
+        "mark": {"type": "geoshape", "fill": "black"}
+      },
+      {
+        "data": {
+          "name": "world",
+          "url": "data/world-110m.json",
+          "format": {"type": "topojson", "feature": "countries"}
+        },
+        "mark": {"type": "geoshape", "fill": "gray", "stroke": "white"}
+      },
+      {
+        "data": {
+          "name": "World Happiness",
+          "url": "https://raw.githubusercontent.com/jeelelel/jeelelel.github.io/main/data/world-happiness-report-2021-lat-long%20-%20world-happiness-report-2021.csv",
+          "format": {"type": "csv"}
+        },
+        "transform": [
+          {"calculate": "datum.Longitude", "as": "longitude"},
+          {"calculate": "datum.Latitude", "as": "latitude"},
+          {
+            "filter": "(rotate0 * -1) - 90 < datum.longitude && datum.longitude < (rotate0 * -1) + 90 && (rotate1 * -1) - 90 < datum.latitude && datum.latitude < (rotate1 * -1) + 90"
+          },
+          {"calculate": "datum['Ladder score']", "as": "magnitude"}
+        ],
+        "mark": {"type": "circle", "color": "red", "opacity": 0.5},
+        "encoding": {
+          "longitude": {"field": "longitude", "type": "quantitative"},
+          "latitude": {"field": "latitude", "type": "quantitative"},
+          "size": {
+            "legend": null,
+            "field": "magnitude",
+            "type": "quantitative",
+            "scale": {
+              "type": "linear",
+              "domain": [0,10],
+              "range": [0, {"expr": "pow(HappinessLadder, 3)"}]
+            }
+          },
+          "tooltip": [{"field": "magnitude"}]
+        }
+      }
+    ]
+  }
