@@ -132,7 +132,6 @@ body {
 .slide__subheader{
   padding-left: 25%;
   z-index: 9;
-  position: relative;
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
