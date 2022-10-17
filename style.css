@@ -230,3 +230,8 @@ body {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
+
+#scatter_plot1{
+  align-self: right;
+  align-content: flex-end;
+}

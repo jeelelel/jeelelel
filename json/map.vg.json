@@ -138,7 +138,7 @@
     "encoding": {
     "x": {
     "field": "year",
-    "timeUnit": "yearmonth",
+    "timeUnit": "year",
     "scale": {"domain": {"param": "time_brush"}},
     "axis": {"title": "", "tickCount": 5, "grid": false}
     },
