@@ -124,7 +124,8 @@ body {
   display: flex;
   -webkit-box-align: center;
           align-items: center;
-  overflow-y: hidden;
+  overflow-y:visible;
+  overflow-x:visible;
   -webkit-transform: translateX(5%);
           transform: translateX(5%);
 }
