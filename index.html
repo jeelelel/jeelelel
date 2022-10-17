@@ -132,9 +132,29 @@
     <div class="slide__content">
       <header class="slide__header">
         <div class="chart__img" id='scatter_plot4'>
+
           <script type="text/javascript">
             var spec5 = "json/log-gdp-social-support.vg.json";
             vegaEmbed('#scatter_plot4', spec5, { "actions": false }).then(function (result) {
+                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                }).catch(console.error);
+          </script>
+          </div>
+      </header>
+      <h3>Freedom allows people to make choices that they’re proud of. This makes them happier because they know that they’ve earned their happiness through their own free will. For some people the most important thing will be economic freedom, for others, free speech will matter more.</h3>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="slide__content">
+      <header class="slide__header">
+        <h3>
+          Economics, more than any other field, traditionally assumes variables like a high GDP per capita, a long life expectancy, or a low unemployment rate are the keys to human contentment. As a dedicated economics nerd, I too am guilty of placing these holy metrics above all else. But the data on human happiness seem to tell a more complicated story…
+        </h3>
+        <div class="chart__img" id='scatter_plot5'>
+          <script type="text/javascript">
+            var spec6 = "json/freedom-mess.vg.json";
+            vegaEmbed('#scatter_plot5', spec6, { "actions": false }).then(function (result) {
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
                 }).catch(console.error);
           </script>
@@ -146,14 +166,9 @@
   <section class="slide">
     <div class="slide__content">
       <header class="slide__header">
-        <div class="chart__img" id='scatter_plot5'>
-          <script type="text/javascript">
-            var spec6 = "json/freedom-mess.vg.json";
-            vegaEmbed('#scatter_plot5', spec6, { "actions": false }).then(function (result) {
-                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-                }).catch(console.error);
-          </script>
-          </div>
+        <h2 class="slide__title">
+          <span class="title-line"><span>So, What do you think is Happiness ?</span></span>
+        </h2>
       </header>
     </div>
   </section>
